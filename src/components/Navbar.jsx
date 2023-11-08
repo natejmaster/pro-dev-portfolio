@@ -8,7 +8,6 @@ const Navbar = () => {
         <Link to="/" className="text-yellow-300 hover:text-blue-500">About Me</Link>
         <Link to="/myprojects" className="text-yellow-300 hover:text-blue-500">My Projects</Link>
         <Link to="/resume" className="text-yellow-300 hover:text-blue-500">Resume</Link>
-        <Link to="/inquiries" className="text-yellow-300 hover:text-blue-500">Inquiries</Link>
       </div>
     </nav>
   );

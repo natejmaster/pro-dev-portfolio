@@ -25,19 +25,21 @@ export default function MyProjects() {
     <div className="carousel w-full">
       {/* Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white p-4 rounded-lg shadow-lg">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
+          <div className="bg-gray-800 p-4 rounded-lg shadow-lg text-yellow-300">
             <h2 className="text-2xl font-semibold">{selectedProject.name}</h2>
             <p className="mt-2">{selectedProject.description}</p>
             <ul className="mt-4">
               {selectedProject.languages.map((language) => (
-                <li key={language}>{language}</li>
+                <li key={language} className="text-yellow-300">
+                  {language}
+                </li>
               ))}
             </ul>
             <div className="mt-4">
               <a
                 href={selectedProject.githubLink}
-                className="btn btn-primary"
+                className="btn btn-primary bg-yellow-300 text-gray-800"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -45,14 +47,17 @@ export default function MyProjects() {
               </a>
               <a
                 href={selectedProject.deployedLink}
-                className="btn btn-primary"
+                className="btn btn-primary bg-yellow-300 text-gray-800"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Deployed Link
               </a>
             </div>
-            <button className="mt-4 btn btn-secondary" onClick={closeModal}>
+            <button
+              className="mt-4 btn btn-secondary custom-button"
+              onClick={closeModal}
+            >
               Close
             </button>
           </div>
@@ -63,10 +68,10 @@ export default function MyProjects() {
       <div id="slide1" className="carousel-item relative w-full" onClick={(e) => openModal({ data: project1, target: e.target })}>
         <img src={booksgalore} className="w-full" />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide4" className="btn btn-circle">
+          <a href="#slide4" className="btn btn-circle text-yellow-300">
             ❮
           </a>
-          <a href="#slide2" className="btn btn-circle">
+          <a href="#slide2" className="btn btn-circle text-yellow-300">
             ❯
           </a>
         </div>
@@ -74,10 +79,10 @@ export default function MyProjects() {
       <div id="slide2" className="carousel-item relative w-full" onClick={(e) => openModal({ data: project2, target: e.target })}>
         <img src={fridgeraider} className="w-full" />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" className="btn btn-circle">
+          <a href="#slide1" className="btn btn-circle text-yellow-300">
             ❮
           </a>
-          <a href="#slide3" className="btn btn-circle">
+          <a href="#slide3" className="btn btn-circle text-yellow-300">
             ❯
           </a>
         </div>
@@ -85,10 +90,10 @@ export default function MyProjects() {
       <div id="slide3" className="carousel-item relative w-full" onClick={(e) => openModal({ data: project3, target: e.target })}>
         <img src={jate} className="w-full" />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" className="btn btn-circle">
+          <a href="#slide2" className="btn btn-circle text-yellow-300">
             ❮
           </a>
-          <a href="#slide4" className="btn btn-circle">
+          <a href="#slide4" className="btn btn-circle text-yellow-300">
             ❯
           </a>
         </div>
@@ -96,10 +101,10 @@ export default function MyProjects() {
       <div id="slide4" className="carousel-item relative w-full" onClick={(e) => openModal({ data: project4, target: e.target })}>
         <img src={logogen} className="w-full" />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" className="btn btn-circle">
+          <a href="#slide3" className="btn btn-circle text-yellow-300">
             ❮
           </a>
-          <a href="#slide5" className="btn btn-circle">
+          <a href="#slide5" className="btn btn-circle text-yellow-300">
             ❯
           </a>
         </div>
@@ -107,10 +112,10 @@ export default function MyProjects() {
       <div id="slide5" className="carousel-item relative w-full" onClick={(e) => openModal({ data: project5, target: e.target })}>
         <img src={weatherapp} className="w-full" />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide4" className="btn btn-circle">
+          <a href="#slide4" className="btn btn-circle text-yellow-300">
             ❮
           </a>
-          <a href="#slide1" className="btn btn-circle">
+          <a href="#slide1" className="btn btn-circle text-yellow-300">
             ❯
           </a>
         </div>
@@ -122,40 +127,40 @@ export default function MyProjects() {
 // Define the project data
 const project1 = {
   name: 'Books Galore',
-  description: 'A book catalog app.',
-  languages: ['React', 'Node.js', 'MongoDB'],
-  githubLink: 'https://github.com/yourname/booksgalore',
-  deployedLink: 'https://booksgalore.com',
+  description: 'This application was a demonstration of full-stack programming with a focus on back-end development. We created a database service for an independent bookstore, populated this inventory with seeded data, and added a user management software so users could create accounts and add books to their personal wishlist (since no actual books were bought or sold)',
+  languages: ['MySQL', 'Express', 'Node', 'Handlebar', 'Object-Oriented-Programming', 'Authentication', 'JS', 'Bulma', 'HTML', 'CSS'],
+  githubLink: 'https://github.com/bycait27/bookstore-inventory',
+  deployedLink: 'https://quiet-sierra-53897-6dfbdf75b102.herokuapp.com/',
 };
 
 const project2 = {
   name: 'Fridge Raider',
-  description: 'An app for managing your fridge contents.',
-  languages: ['React', 'Node.js', 'SQLite'],
-  githubLink: 'https://github.com/yourname/fridgeraider',
-  deployedLink: 'https://fridgeraider.com',
+  description: 'Fridge Raider is a recipe-fetching and video resource app for users to take ingredients already in their refrigerator and utilizes API calls to find recipes and corresponding recipe demo videos for anything that includes those ingredients',
+  languages: ['HTML', 'CSS', 'JavaScript', 'Tailwind', 'DaisyUI', 'API calls', 'LocalStorage'],
+  githubLink: 'https://github.com/natejmaster/recipe-finder',
+  deployedLink: 'https://natejmaster.github.io/recipe-finder/',
 };
 
 const project3 = {
   name: 'Jate',
-  description: 'A restaurant booking app.',
-  languages: ['React', 'Node.js', 'MySQL'],
-  githubLink: 'https://github.com/yourname/jate',
-  deployedLink: 'https://jate.com',
+  description: 'A PWA text editor using starter code provided by EdX, JATE (Just A Text Editor) allows users to write notes that will survive the closing of the app or redirection to a different window',
+  languages: ['React', 'Node.js', 'NoSQL', 'PWA Optimization', 'JSX' ],
+  githubLink: 'https://github.com/natejmaster/pwa-text-editor',
+  deployedLink: 'https://bloodcurdling-tomb-08562-cf94015ab6c8.herokuapp.com/',
 };
 
 const project4 = {
-  name: 'Logogen',
-  description: 'A logo design tool.',
-  languages: ['React', 'Python', 'Django'],
+  name: 'Logo Generator',
+  description: 'An SVG logo design tool using Express to create custom images (no deployed app)',
+  languages: ['Express', 'SVG', 'JavaScript', 'API fetching'],
   githubLink: 'https://github.com/yourname/logogen',
-  deployedLink: 'https://logogen.com',
+  deployedLink: 'https://github.com/yourname/logogen',
 };
 
 const project5 = {
   name: 'Weather App',
-  description: 'A weather forecasting app.',
-  languages: ['React', 'Node.js', 'OpenWeather API'],
-  githubLink: 'https://github.com/yourname/weatherapp',
-  deployedLink: 'https://weatherapp.com',
+  description: 'A weather forecasting app that utilized an open-source weather API to provide current weather statistics as well as a 5 day forecast',
+  languages: ['HTML', 'CSS', 'OpenWeather API', 'JavaScript'],
+  githubLink: 'https://github.com/natejmaster/weather-dashboard',
+  deployedLink: 'https://natejmaster.github.io/weather-dashboard/#',
 };

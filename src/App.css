@@ -12,3 +12,7 @@ footer {
     height: 100vh;
   }
   
+  .custom-button {
+    background-color: yellow-300;
+    color: gray-800;
+  }

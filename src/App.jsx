@@ -8,7 +8,7 @@ function App() {
     <>
       <div>
         <Header />
-        <main className="bg-yellow-300">
+        <main className="bg-gray-800 text-yellow-300 p-4 h-full">
           <Outlet />
         </main>
         <Footer />
