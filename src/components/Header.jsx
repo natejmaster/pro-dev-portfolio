@@ -3,9 +3,9 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header>
-      <h1>
-        Nate Master- Full Stack Web Developer
+    <header className="bg-gray-800 p-4">
+      <h1 className="text-yellow-300 text-center text-2xl font-semibold">
+        Nate Master - Full Stack Web Developer
       </h1>
       <Navbar />
     </header>
