@@ -8,15 +8,42 @@ import weatherapp from '../assets/images/weatherapp.png';
 
 export default function MyProjects() {
   return (
-    <div className="flex justify-center items-center">
-      <carousel>
-        <img src={booksgalore} alt="Booksgalore" />
-        <h3 className="flex justify-center">Books Galore: A sample inventory application for independent bookstores to keep track of inventory, users, and user requests</h3>
-        <img src={fridgeraider} alt="Fridgeraider" />
-        <img src={jate} alt="Jate" />
-        <img src={logogen} alt="Logogen" />
-        <img src={weatherapp} alt="Weatherapp" />
-      </carousel>
+<div className="carousel w-full">
+  <div id="slide1" className="carousel-item relative w-full">
+    <img src={booksgalore} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide4" className="btn btn-circle">❮</a> 
+      <a href="#slide2" className="btn btn-circle">❯</a>
     </div>
+  </div> 
+  <div id="slide2" className="carousel-item relative w-full">
+    <img src={fridgeraider} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide1" className="btn btn-circle">❮</a> 
+      <a href="#slide3" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide3" className="carousel-item relative w-full">
+    <img src={jate} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide2" className="btn btn-circle">❮</a> 
+      <a href="#slide4" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide4" className="carousel-item relative w-full">
+    <img src={logogen} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide3" className="btn btn-circle">❮</a> 
+      <a href="#slide5" className="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide5" className="carousel-item relative w-full">
+    <img src={weatherapp} className="w-full" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide4" className="btn btn-circle">❮</a> 
+      <a href="#slide1" className="btn btn-circle">❯</a>
+    </div>
+  </div>
+</div>
   );
 }
