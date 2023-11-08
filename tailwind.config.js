@@ -6,7 +6,7 @@ export default {
       colors: {
         custom: {
           'gray-800': '#242331',
-          'brown-700': '#533E2D',
+          'brown-500': '#A27035',
           'yellow-300': '#DDCA7D',
         },
       },

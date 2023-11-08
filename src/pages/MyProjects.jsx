@@ -1,5 +1,4 @@
 import React from 'react';
-
 import booksgalore from '../assets/images/booksgalore.png';
 import fridgeraider from '../assets/images/fridgeraider.png';
 import jate from '../assets/images/jate.png';
