@@ -4,6 +4,7 @@ import fridgeraider from '../assets/images/fridgeraider.png';
 import jate from '../assets/images/jate.png';
 import logogen from '../assets/images/logogen.png';
 import weatherapp from '../assets/images/weatherapp.png';
+import ubetr from '../assets/images/ubetr.png'
 
 export default function MyProjects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -68,7 +69,7 @@ export default function MyProjects() {
       <div id="slide1" className="carousel-item relative w-full" onClick={(e) => openModal({ data: project1, target: e.target })}>
         <img src={booksgalore} className="w-full" />
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide4" className="btn btn-circle text-yellow-300">
+          <a href="#slide6" className="btn btn-circle text-yellow-300">
             ❮
           </a>
           <a href="#slide2" className="btn btn-circle text-yellow-300">
@@ -115,6 +116,17 @@ export default function MyProjects() {
           <a href="#slide4" className="btn btn-circle text-yellow-300">
             ❮
           </a>
+          <a href="#slide6" className="btn btn-circle text-yellow-300">
+            ❯
+          </a>
+        </div>
+      </div>
+      <div id="slide6" className="carousel-item relative w-full" onClick={(e) => openModal({ data: project6, target: e.target })}>
+        <img src={ubetr} className="w-full" />
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide5" className="btn btn-circle text-yellow-300">
+            ❮
+          </a>
           <a href="#slide1" className="btn btn-circle text-yellow-300">
             ❯
           </a>
@@ -144,7 +156,7 @@ const project2 = {
 const project3 = {
   name: 'Jate',
   description: 'A PWA text editor using starter code provided by EdX, JATE (Just A Text Editor) allows users to write notes that will survive the closing of the app or redirection to a different window',
-  languages: ['React', 'Node.js', 'NoSQL', 'PWA Optimization', 'JSX' ],
+  languages: ['React', 'Node.js', 'NoSQL', 'PWA Optimization', 'JSX'],
   githubLink: 'https://github.com/natejmaster/pwa-text-editor',
   deployedLink: 'https://bloodcurdling-tomb-08562-cf94015ab6c8.herokuapp.com/',
 };
@@ -163,4 +175,12 @@ const project5 = {
   languages: ['HTML', 'CSS', 'OpenWeather API', 'JavaScript'],
   githubLink: 'https://github.com/natejmaster/weather-dashboard',
   deployedLink: 'https://natejmaster.github.io/weather-dashboard/#',
+};
+
+const project6 = {
+  name: 'uBetr',
+  description: 'An MERN-stack NFL micro-sportsbook that provides up-to-date point spread and over/under total betting options for users using virtual currency.',
+  languages: ['React', 'Express', 'Tailwind CSS', 'MongoDB', 'Node.js', 'GraphQL'],
+  githubLink: 'https://github.com/natejmaster/sports-gambling-odds-comp',
+  deployedLink: 'https://rocky-hollows-26852-54ebc26e9935.herokuapp.com/',
 };
